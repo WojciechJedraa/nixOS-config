@@ -112,6 +112,7 @@
     easyeffects
     spotify
     librewolf
+    docker
     obsidian
     steam
   ];

@@ -111,6 +111,7 @@
     vscode
     easyeffects
     spotify
+    thunderbird
     librewolf
     docker
     obsidian

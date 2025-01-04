@@ -10,9 +10,14 @@
       ./hardware-configuration.nix
     ];
 
+
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  #ntfs
+  boot.supportedFilesystems = [ "ntfs" ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -109,14 +114,28 @@
     zoxide
     git
     vscode
+    nodejs_23
     easyeffects
     spotify
     thunderbird
     librewolf
     docker
     obsidian
-    steam
-  ];
+];
+
+# Enable the Oracle Extension Pack.
+nixpkgs.config.virtualbox.enableExtensionPack = true;
+
+# Enable virtualbox.
+virtualisation.virtualbox.host.enable = true;
+
+services.flatpak.enable = true;
+
+programs.steam = {
+	enable = true;
+	remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+	dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+};
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

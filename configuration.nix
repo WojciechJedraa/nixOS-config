@@ -131,6 +131,11 @@ nixpkgs.config.virtualbox.enableExtensionPack = true;
 virtualisation.virtualbox.host.enable = true;
 
 
+# mullvadVPN
+services.mullvad-vpn.package = pkgs.mullvad-vpn;
+services.mullvad-vpn.enable = true;
+
+
   virtualisation.docker = {
     enable = true;
     enableOnBoot = true;

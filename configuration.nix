@@ -86,11 +86,13 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  users.groups.docker = {};
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.wj = {
     isNormalUser = true;
     description = "wj";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird
@@ -119,7 +121,6 @@
     spotify
     thunderbird
     librewolf
-    docker
     obsidian
 ];
 
@@ -128,6 +129,16 @@ nixpkgs.config.virtualbox.enableExtensionPack = true;
 
 # Enable virtualbox.
 virtualisation.virtualbox.host.enable = true;
+
+
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
 
 services.flatpak.enable = true;
 

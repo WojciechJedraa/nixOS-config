@@ -122,6 +122,7 @@
     thunderbird
     librewolf
     obsidian
+    neofetch
 ];
 
 # Enable the Oracle Extension Pack.

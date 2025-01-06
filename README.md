@@ -10,4 +10,5 @@ As of first commit it includes:
 - librewolf browser
 - git
 - neovim
+- mullvadVPN
 - everything else that i forgot about, but need for to work

@@ -55,6 +55,16 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+
+
+  environment.plasma6.excludePackages = with pkgs.kdePackages;
+
+  [
+    discover
+    kate
+  ];
+
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "pl";
@@ -93,10 +103,7 @@
     isNormalUser = true;
     description = "wj";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
-    packages = with pkgs; [
-      kdePackages.kate
-    #  thunderbird
-    ];
+    packages = with pkgs; [];
   };
 
   # Install firefox.
@@ -123,10 +130,13 @@
     librewolf
     obsidian
     neofetch
+    discord
+    samsung-unified-linux-driver
+    splix
 ];
 
 # Enable the Oracle Extension Pack.
-nixpkgs.config.virtualbox.enableExtensionPack = true;
+virtualisation.virtualbox.host.enableExtensionPack = true;
 
 # Enable virtualbox.
 virtualisation.virtualbox.host.enable = true;

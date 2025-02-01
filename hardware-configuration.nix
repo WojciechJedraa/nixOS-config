@@ -28,6 +28,7 @@
     [ { device = "/dev/disk/by-uuid/b72899f3-3488-4f88-9bbf-521c6fb6b958"; }
     ];
 
+
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction

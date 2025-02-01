@@ -122,8 +122,9 @@
     bat
     zoxide
     git
+    git-lfs
     vscode
-    nodejs_23
+    nodejs_22
     easyeffects
     spotify
     thunderbird
@@ -133,6 +134,11 @@
     discord
     samsung-unified-linux-driver
     splix
+    # mobile dev
+    # android
+    android-tools
+    android-studio
+    android-studio-tools
 ];
 
 # Enable the Oracle Extension Pack.

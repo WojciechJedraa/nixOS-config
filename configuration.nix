@@ -134,6 +134,12 @@
     discord
     samsung-unified-linux-driver
     splix
+    postman
+    # camera
+    webcamoid
+    libcamera
+    obs-studio
+
     # mobile dev
     # android
     android-tools

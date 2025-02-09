@@ -135,6 +135,9 @@
     samsung-unified-linux-driver
     splix
     postman
+    vlc
+    libvlc
+    typescript
     # camera
     webcamoid
     libcamera
@@ -145,6 +148,9 @@
     android-tools
     android-studio
     android-studio-tools
+
+    #games
+    prismlauncher
 ];
 
 # Enable the Oracle Extension Pack.
